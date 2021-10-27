@@ -1,7 +1,7 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Mirium extends Model {}
+class Mirum extends Model {}
 
 Mirum.init({
     id: {
