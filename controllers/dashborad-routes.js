@@ -50,7 +50,7 @@ async function getSOQuestions(subject, page) {
       };
 
       let currentDate = Date.now();
-      let tenYearDiff = currentDate - 316224000000;
+      let tenYearDiff = currentDate - 315360000000;
 
       if (overflowData.length > 21) {
         return false;
@@ -58,13 +58,12 @@ async function getSOQuestions(subject, page) {
 
       if (newActionTime > tenYearDiff) {
         overflowData.push(data);
-        // console.log(overflowData);
       }
     });
     let removedValue = overflowData.shift();
 
     // console.log(overflowData);
-    console.log(overflowData.length);
+    // console.log(overflowData.length);
   } catch (error) {
     console.log(error);
   }
