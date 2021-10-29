@@ -1,28 +1,5 @@
-
-const router = require('express').Router();
-const { Mirum } = require('../models/');
-const axios = require("axios");
-const cheerio = require("cheerio");
-
-let overflowData = [];
-
-router.get('/',async (req, res) => {
-    try {
-        
-    }
-})
-
-
-
-
-
-async function getSOQuestions(subject, page) {
-  const url =
-    "https://stackoverflow.com/questions/tagged/" +
-    subject +
-    "?tab=votes" +
-    "&pages=" +
-    page;
+async function getSOQuestions(link) {
+  const url = link+"?answertab=votes#tab-top";
 
   try {
     const res = await axios.get(url);
@@ -31,18 +8,19 @@ async function getSOQuestions(subject, page) {
     //loading response data into a Cheerio instance
     const $ = cheerio.load(html);
 
-    $(".mln24").each((i, el) => {
-      const excerpt = $(el)
-        .find(".summary")
-        .find(".excerpt")
+    $(".container").each((i, el) => {
+      const questionDetails = $(el)
+        .find(".question")
+        .find(".js-post-body")
+        .children()
         .text()
         .replace(/[\n\r]/g, " ");
-      const questionSummary = $(el)
-        .find(".summary")
+      const question = $(el)
+        .find("#question-header")
         .find(".question-hyperlink")
         .text();
 
-      const actionTime = $(el)
+      const answer = $(el)
         .find(".summary")
         .find(".relativetime")
         .prop("title");
@@ -82,6 +60,6 @@ async function getSOQuestions(subject, page) {
   }
 }
 
-for (let i = 0; i < 10; i++) {
-  getSOQuestions("mysql", i);
-}
+getSOQuestions(
+  "https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array"
+);
