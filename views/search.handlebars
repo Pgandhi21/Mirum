@@ -20,19 +20,19 @@
 				General questions
 			</h3>
 			<p id="generalPitch">Pick a language, start learning.</p>
-			<form>
+			<form id ="custom-tag">
 				<div class="choices" id="languageChoicesButtons">
 					<div class="btn-group" role="group">
-						<button class="btn btn-secondary" onclick = "editFormHandler(event)" type="button" id="javascriptButton">
+						<button class="btn btn-secondary" onclick = "clickButtonHandler(event)" type="button" id="javascriptButton">
 							JavaScript
 						</button> 
-						<button class="btn btn-secondary" type="button" id="htmlButton">
+						<button class="btn btn-secondary" onclick = "clickButtonHandler(event)" type="button" id="htmlButton">
 							HTML
 						</button> 
-						<button class="btn btn-secondary" type="button" id="cssButton">
+						<button class="btn btn-secondary" onclick = "clickButtonHandler(event)" type="button" id="cssButton">
 							CSS
 						</button> 
-						<button class="btn btn-secondary" type="button" id="pythonButton">
+						<button class="btn btn-secondary" onclick = "clickButtonHandler(event)" type="button" id="pythonButton">
 							Python
 						</button>
 					</div>
@@ -41,7 +41,7 @@
 					<label for="languageInput">
 						Please enter any language
 					</label>
-					<input type="search" class="form-control" id="languageBox">
+					<input type="search" class="form-control" name="languageBox">
 				</div>
 				<button type="submit" class="btn btn-primary">
 					Submit
@@ -57,12 +57,12 @@
 			<p id="specificPitch">
 				Ask away, we'll find the answer.
 			</p>
-			<form role="form">
+			<form role="form" id ="custom-question">
 				<div class="form-group">
 					<label for="exampleInputPassword1">
 						What's your question?
 					</label>
-					<input type="search" class="form-control" id="questionBox">
+					<input type="search" class="form-control" id="questionBox" name="customQuestion">
 				</div>
 				<button type="submit" class="btn btn-primary">
 					Submit

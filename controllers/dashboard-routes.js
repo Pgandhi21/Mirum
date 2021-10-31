@@ -28,11 +28,11 @@ async function resultsQuery(subject) {
     }
 
     const url =
-      "https://stackoverflow.com/search?page=" +
-      page +
-      "&tab=Votes&q=" +
-      subject;
-    console.log(url);
+      "https://stackoverflow.com/questions/tagged/" +
+      subject +
+      "?tab=Votes&page=" +
+      page;
+
     try {
       const res = await axios.get(url);
       const html = res.data;
@@ -89,7 +89,7 @@ async function resultsQuery(subject) {
       // console.log(overflowData);
       // console.log(overflowData.length);
     } catch (error) {
-      console.log(error);
+      console.log("error");
     }
   }
   console.log(overflowData.length);
