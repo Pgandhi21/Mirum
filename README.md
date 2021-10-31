@@ -2,10 +2,10 @@
 
 ## Table of Contents
 
-[The Members](#members)
-[The Concept](#concept)
-[The User Experience](#experience)
-[The Build](#build)
+[The Members](#members)<br />
+[The Concept](#concept)<br />
+[The User Experience](#experience)<br />
+[The Build](#build)<br />
 
 
 ### Members
