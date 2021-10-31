@@ -36,7 +36,7 @@ const customQuestionHandler = async function (event) {
 
   const customQuestionID = QuestionID.replaceAll(" ", "+");
 
-  await fetch(`/question/${customQuestionID}`);
+  // await fetch(`/question/${customQuestionID}`);
 
   document.location.replace(`/question/${customQuestionID}`);
 };

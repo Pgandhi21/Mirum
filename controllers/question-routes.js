@@ -6,7 +6,7 @@ const exampleData = require("../seeds/data");
 // Route to top 20 results for the language chosen or individual question in last 10 years
 router.get("/:id", async (req, res) => {
   try {
-    // const data = await exampleData;
+    // const sampleData = await exampleData;
     const data = await resultsQuery(req.params.id);
 
     res.render("results", {
@@ -90,7 +90,7 @@ async function resultsQuery(subject) {
       console.log("error");
     }
   }
-  console.log(overflowData.length);
+  console.log(overflowData.length, "line 100");
   return overflowData;
 }
 
