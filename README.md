@@ -30,9 +30,9 @@
 - Darion Curtis
 
 
-![Alt text](Mirum/assets/mirumlanding.png?raw=true "Optional Title")
-![Alt text](Mirum/assets/mirumsearch.png?raw=true "Optional Title")
-![Alt text](Mirum/assets/mirumresults.png?raw=true "Optional Title")
+![Alt text](assets/mirumlanding.png?raw=true "Optional Title")
+![Alt text](assets/mirumsearch.png?raw=true "Optional Title")
+![Alt text](assets/mirumresults.png?raw=true "Optional Title")
 
 
 
