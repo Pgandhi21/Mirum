@@ -2,10 +2,10 @@
 
 ## Table of Contents
 
-[The Members](#The Members)
+[The Members](#members)
 
 
-### The Members
+### Members
 
 - Preksha Gandhi
 - Zac Goad
