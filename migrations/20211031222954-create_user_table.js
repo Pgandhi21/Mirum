@@ -1,8 +1,10 @@
 'use strict';
 
+const { QueryInterface } = require("sequelize/types");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    queryInterface.createTable("user_table," {
+    return queryInterface.createTable("user_table", {
       user_id:{
         
         type:Sequelize.INTEGER,
@@ -17,11 +19,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
+    return QueryInterface.dropTable("user_table");
+  
   }
 };
