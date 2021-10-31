@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../config/connection');
 const Sequelize = new Sequelize(
-    'Mirum',
     'user_table',
+    'root',
     'sqlroot',
     {
         dialect: 'mysql',
@@ -10,4 +10,6 @@ const Sequelize = new Sequelize(
     }
 );
 
-module.exports = sequelize
+module.exports = sequelize;
+
+global.sequelize =sequelize;
