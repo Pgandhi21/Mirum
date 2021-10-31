@@ -20,7 +20,7 @@ router.get("/:id", async (req, res) => {
 
 async function resultsQuery(subject) {
   let overflowData = [];
-  for (page = 1; page < 50; page++) {
+  for (page = 1; page < 25; page++) {
     if (overflowData.length > 20) {
       break;
     }
