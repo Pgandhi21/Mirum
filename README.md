@@ -3,9 +3,9 @@
 ## Table of Contents
 
 [The Members](#members)
-[The Concept](#the concept)
-[The User Experience](#user experience)
-[The Build](#the build)
+[The Concept](#concept)
+[The User Experience](#experience)
+[The Build](#build)
 
 
 ### Members
@@ -17,8 +17,8 @@
 ### Concept
 
 
-### User Experience
+### Experience
 
 
-### The Build
+### Build
 
