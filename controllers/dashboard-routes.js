@@ -8,8 +8,8 @@ const exampleData = require("../seeds/data");
 router.get("/:id", async (req, res) => {
   console.log(req.params.id);
   try {
-    const data = await exampleData;
-    // const data = await resultsQuery(req.params.id);
+    // const data = await exampleData;
+    const data = await resultsQuery(req.params.id);
     console.log(data);
     res.render("results", {
       layout: "resultsPage",
@@ -89,7 +89,7 @@ async function resultsQuery(subject) {
       // console.log(overflowData);
       // console.log(overflowData.length);
     } catch (error) {
-      console.log('error');
+      console.log("error");
     }
   }
   console.log(overflowData.length);
