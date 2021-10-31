@@ -29,6 +29,11 @@
 - Darion Curtis
 
 
+![Alt text](Mirum/assets/mirumlanding.png?raw=true "Optional Title")
+![Alt text](Mirum/assets/mirumsearch.png?raw=true "Optional Title")
+![Alt text](Mirum/assets/mirumresults.png?raw=true "Optional Title")
+
+
 
 
 
@@ -48,5 +53,4 @@
 
 
 ### Build
-  The build was, for the most part, pretty straightforward.  Three pages: a landing page, a search page, and a results page.  Constructing the pages was simple enough, just tasteful CSS over simple HTML with appropriate links, later converted into Handlebars for integration with JavaScript.  The toughest part was building the API routes that scraped the website we decided to gather information from (again, in this case, Stack Overflow) and making sure that all features worked properly.  We did hit a wall, a CAPTCHA, that continues to be a problem with more specific questions, so for the future version of this site, we will have to find a way around it.  Another option is to find sites to scrape that don't have CAPTCHA walls.
-
+  The build was, for the most part, pretty straightforward.  Three pages: a landing page, a search page, and a results page.  Constructing the pages was simple enough, just tasteful CSS over simple HTML with appropriate links, later converted into Handlebars for integration with JavaScript.  The toughest part was building the API routes that scraped the website we decided to gather information from (again, in this case, Stack Overflow) and making sure that all features worked properly.
