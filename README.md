@@ -3,6 +3,9 @@
 ## Table of Contents
 
 [The Members](#members)
+[The Concept](#the concept)
+[The User Experience](#user experience)
+[The Build](#the build)
 
 
 ### Members
@@ -11,10 +14,10 @@
 - Zac Goad
 - Darion Curtis
 
-### The Concept
+### Concept
 
 
-### The User Experience
+### User Experience
 
 
 ### The Build
