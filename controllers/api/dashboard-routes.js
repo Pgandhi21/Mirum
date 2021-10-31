@@ -37,16 +37,13 @@ async function resultsQuery(subject) {
       const $ = cheerio.load(html);
 
       $(".mln24").each((i, el) => {
-        const excerpt = $(el)
+        const summary = $(el)
           .find(".summary")
           .find(".excerpt")
           .text()
           .replace(/[\n\r]/g, "")
           .trim();
-        const questionSummary = $(el)
-          .find(".summary")
-          .find(".question-hyperlink")
-          .text();
+        const title = $(el).find(".summary").find(".question-hyperlink").text();
 
         const actionTime = $(el)
           .find(".summary")
@@ -62,8 +59,8 @@ async function resultsQuery(subject) {
           .attr("href");
 
         const data = {
-          questionSummary,
-          excerpt,
+          title,
+          summary,
           link: `https://stackoverflow.com${link}`,
           date,
         };
