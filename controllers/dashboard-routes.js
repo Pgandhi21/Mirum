@@ -22,17 +22,17 @@ router.get("/:id", async (req, res) => {
 
 async function resultsQuery(subject) {
   let overflowData = [];
-  for (page = 1; page < 25; page++) {
+  for (page = 1; page < 2; page++) {
     if (overflowData.length > 19) {
       break;
     }
 
     const url =
-      "https://stackoverflow.com/search?page=" +
-      page +
-      "&tab=Votes&q=" +
-      subject;
-    console.log(url);
+      "https://stackoverflow.com/questions/tagged/" +
+      subject +
+      "?tab=Votes&page=" +
+      page;
+
     try {
       const res = await axios.get(url);
       const html = res.data;
