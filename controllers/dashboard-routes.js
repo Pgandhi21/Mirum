@@ -1,12 +1,16 @@
 const router = require("express").Router();
 const axios = require("axios");
 const cheerio = require("cheerio");
+const exampleData = require("../seeds/data");
 
 // Route to top 20 results for the language chosen or individual question in last 10 years
-router.get("/:id", async (req, res) => {
-  try {
-    const data = await resultsQuery(req.params.id);
 
+router.get("/:id", async (req, res) => {
+  console.log(req.params.id);
+  try {
+    // const data = await exampleData;
+    const data = await resultsQuery(req.params.id);
+    console.log(data);
     res.render("results", {
       layout: "resultsPage",
       data,
@@ -18,8 +22,8 @@ router.get("/:id", async (req, res) => {
 
 async function resultsQuery(subject) {
   let overflowData = [];
-  for (page = 1; page < 50; page++) {
-    if (overflowData.length > 20) {
+  for (page = 1; page < 25; page++) {
+    if (overflowData.length > 19) {
       break;
     }
 
@@ -28,7 +32,7 @@ async function resultsQuery(subject) {
       page +
       "&tab=Votes&q=" +
       subject;
-
+    console.log(url);
     try {
       const res = await axios.get(url);
       const html = res.data;
@@ -36,17 +40,19 @@ async function resultsQuery(subject) {
       //loading response data into a Cheerio instance
       const $ = cheerio.load(html);
 
-      $(".mln24").each((i, el) => {
-        const excerpt = $(el)
+      $(".question-summary").each((i, el) => {
+        const body = $(el)
           .find(".summary")
           .find(".excerpt")
           .text()
           .replace(/[\n\r]/g, "")
           .trim();
-        const questionSummary = $(el)
+        const title = $(el)
           .find(".summary")
           .find(".question-hyperlink")
-          .text();
+          .text()
+          .replace(/[\n\r]/g, "")
+          .trim();
 
         const actionTime = $(el)
           .find(".summary")
@@ -62,14 +68,13 @@ async function resultsQuery(subject) {
           .attr("href");
 
         const data = {
-          questionSummary,
-          excerpt,
+          title,
+          body,
           link: `https://stackoverflow.com${link}`,
           date,
         };
 
-        let currentDate = Date.now();
-        let tenYearDiff = currentDate - 315360000000;
+        const tenYearDiff = Date.now() - 315360000000;
 
         if (overflowData.length > 21) {
           return false;
@@ -87,6 +92,8 @@ async function resultsQuery(subject) {
       console.log(error);
     }
   }
+  console.log(overflowData.length);
+  return overflowData;
 }
 
 module.exports = router;
