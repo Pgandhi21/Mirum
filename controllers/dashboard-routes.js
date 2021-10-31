@@ -89,7 +89,7 @@ async function resultsQuery(subject) {
       // console.log(overflowData);
       // console.log(overflowData.length);
     } catch (error) {
-      console.log('error');
+      console.log("error");
     }
   }
   console.log(overflowData.length);
