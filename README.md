@@ -2,10 +2,7 @@
 
 ## Table of Contents
 
-[The Members](#The Members)
-[The Concept](#The Concept)
-[The User Experience](#The User Experience)
-[The Build](#The Build)
+(#The Members)
 
 
 ###The Members
