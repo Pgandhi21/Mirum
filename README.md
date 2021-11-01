@@ -16,10 +16,12 @@
 - cheerio
 - express
 - express-handlebars
+- express-sessions
 - dotenv
 - mysql2
 - sequelize
 - handlebars
+- connect-session-sequalize
 
 
 
