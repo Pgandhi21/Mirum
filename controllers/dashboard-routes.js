@@ -86,8 +86,6 @@ async function resultsQuery(subject) {
       });
       let removedValue = overflowData.shift();
 
-      // console.log(overflowData);
-      // console.log(overflowData.length);
     } catch (error) {
       console.log("error");
     }

@@ -8,7 +8,7 @@ router.get("/:id", async (req, res) => {
   try {
     // const sampleData = await exampleData;
     const data = await resultsQuery(req.params.id);
-
+    console.log(data);
     res.render("results", {
       layout: "resultsPage",
       data,
@@ -30,7 +30,7 @@ async function resultsQuery(subject) {
       page +
       "&tab=Relevance&q=is%3aquestion+" +
       subject;
-
+    
     try {
       const res = await axios.get(url);
       const html = res.data;
@@ -83,9 +83,6 @@ async function resultsQuery(subject) {
         }
       });
       let removedValue = overflowData.shift();
-
-      // console.log(overflowData);
-      // console.log(overflowData.length);
     } catch (error) {
       console.log("error");
     }
