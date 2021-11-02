@@ -22,7 +22,7 @@ Heroku webpage: https://quiet-oasis-10226.herokuapp.com/
 - mysql2
 - sequelize
 - handlebars
-- connect-session-sequalize
+- connect-session-sequelize
 
 
 
