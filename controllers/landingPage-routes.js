@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
   });
 });
 
-router.post("/", async (req, res) => {
+router.post("/signup", async (req, res) => {
   try {
     const newUser = await User.create({
       username: req.body.username,
@@ -58,7 +58,5 @@ router.post("/login", async (req, res) => {
     res.status(400).json({ message: "No user account found!" });
   }
 });
-
-
 
 module.exports = router;
