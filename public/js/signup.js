@@ -12,7 +12,7 @@ const signupFormHandler = async function (event) {
     }),
     headers: { "Content-Type": "application/json" },
   });
-
+  
   if (response.ok) {
     document.location.replace("/search");
   } else {
@@ -21,5 +21,5 @@ const signupFormHandler = async function (event) {
 };
 
 document
-  .querySelector("#signUpPitch")
+  .querySelector("#signUp-Form")
   .addEventListener("submit", signupFormHandler);

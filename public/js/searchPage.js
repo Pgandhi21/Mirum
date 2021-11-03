@@ -26,21 +26,3 @@ const customTagHandler = async function (event) {
 document
   .querySelector("#custom-tag")
   .addEventListener("submit", customTagHandler);
-
-const customQuestionHandler = async function (event) {
-  event.preventDefault();
-
-  const QuestionID = document.querySelector(
-    'input[name="customQuestion"]'
-  ).value;
-
-  const customQuestionID = QuestionID.replaceAll(" ", "+");
-
-  // await fetch(`/question/${customQuestionID}`);
-
-  document.location.replace(`/question/${customQuestionID}`);
-};
-
-document
-  .querySelector("#custom-question")
-  .addEventListener("submit", customQuestionHandler);

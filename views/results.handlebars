@@ -1,13 +1,13 @@
-<div class="results">
-  {{#each data}}
-  <article class="card">
-    <div class="card-header flex-row justify-space-between">
-      <h2><a href="{{link}}">{{title}}</a></h2>
-    </div>
-    <div class="card-body">
-      <p>{{body}}</p>
-      <p>Asked on: {{date}}</p>
-    </div>
-  </article>
+<div>
+{{#each data}}
+  <div class="card col-md-8 mx-auto" >
+    <article class= "card-body" id = "resultsCard">
+      <h5 class="card-title"><a href="{{link}}">{{title}}</a></h5>
+      <div class="card-text text-wrap">
+        <p>{{body}}</p>
+        <p>Asked on: {{date}}</p>
+      </div>
+    </article>
+  </div>
   {{/each}}
 </div>

@@ -6,7 +6,7 @@
 				Find what you need.
 			</h3>
 			<p id="searchTitlePitch">
-				Select a language, get answers from the crowd.  Or, refine your search for more specific answers.  The choice is yours.
+				Select a language, get answers from the crowd.
 			</p>
 		</div>
 	</div>
@@ -15,11 +15,15 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-5" id="generalCol">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-6" id="generalCol">
 			<h3 id="generalTitle">
 				General questions
 			</h3>
-			<p id="generalPitch">Pick a language, start learning.</p>
+			<pre id="generalPitch">
+Pick a language or a framework
+And start learning</pre>
 			<form id ="custom-tag">
 				<div class="choices" id="languageChoicesButtons">
 					<div class="btn-group" role="group">
@@ -39,30 +43,9 @@
 				</div>
 				<div class="form-group">
 					<label for="languageInput">
-						Please enter any language
+						Please enter any language or framework
 					</label>
-					<input type="search" class="form-control" name="languageBox">
-				</div>
-				<button type="submit" class="btn btn-primary">
-					Submit
-				</button>
-			</form>
-		</div>
-		<div class="col-md-2">
-		</div>
-		<div class="col-md-5" id="specificCol">
-			<h3 id="specificTitle">
-				Specific Questions
-			</h3>
-			<p id="specificPitch">
-				Ask away, we'll find the answer.
-			</p>
-			<form role="form" id ="custom-question">
-				<div class="form-group">
-					<label for="exampleInputPassword1">
-						What's your question?
-					</label>
-					<input type="search" class="form-control" id="questionBox" name="customQuestion">
+					<input type="search" class="form-control col-md-4 offset-md-4" name="languageBox">
 				</div>
 				<button type="submit" class="btn btn-primary">
 					Submit
@@ -70,15 +53,20 @@
 			</form>
 		</div>
 	</div>
+
 	<div class="row justify-content-center" id="navRow">
 		<div class="col-md-12">
 			<ul class="nav" >
 				<li class="nav-item" style="float: none; margin: 0 auto;" id="homeLink">
 					<a class="nav-link active" href="/">Home</a>
 				</li>
+				<li class="nav-item" style="float: none; margin: 0 auto;" id ="logoutLink">
+					<a class="nav-link active" href="/">Log Out</a>
+				</li>
 			</ul>
 		</div>
 	</div>
 </div>
 
+<script src="/js/logout.js"></script>
     
